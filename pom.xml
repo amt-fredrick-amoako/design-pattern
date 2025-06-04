@@ -10,7 +10,7 @@
   <name>design-pattern</name>
   <url>http://maven.apache.org</url>
   <modules>
-    <module>src/decorator</module>
+    <module>src/patterns</module>
   </modules>
 
   <properties>
