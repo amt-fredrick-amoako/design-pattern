@@ -1,8 +1,8 @@
-package com.pdt.decorators.javaio;
+package com.pdt.simplefactory.decorators.javaio;
 
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class LowerCaseInputStream extends FilterInputStream {
     /**
@@ -31,5 +31,18 @@ public class LowerCaseInputStream extends FilterInputStream {
             b[i] = (byte)Character.toLowerCase((char)b[i]);
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int c;
+        try{
+            InputStream in = new LowerCaseInputStream(new BufferedInputStream(Files.newInputStream(Paths.get("src/main/java/com/pdt/decorators/javaio/LowerCaseInputStream.java"))));
+            while ((c = in.read()) >= 0) {
+                System.out.println((char)c);
+            }
+            in.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

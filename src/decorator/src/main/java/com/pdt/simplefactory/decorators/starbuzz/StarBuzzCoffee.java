@@ -1,11 +1,11 @@
-package com.pdt.decorators.starbuzz;
+package com.pdt.simplefactory.decorators.starbuzz;
 
-import com.pdt.decorators.starbuzz.decorators.Mocha;
-import com.pdt.decorators.starbuzz.decorators.Soy;
-import com.pdt.decorators.starbuzz.decorators.Whip;
-import com.pdt.decorators.starbuzz.implementations.DarkRoast;
-import com.pdt.decorators.starbuzz.implementations.Espresso;
-import com.pdt.decorators.starbuzz.implementations.HouseBlend;
+import com.pdt.simplefactory.decorators.starbuzz.decorators.Mocha;
+import com.pdt.simplefactory.decorators.starbuzz.decorators.Soy;
+import com.pdt.simplefactory.decorators.starbuzz.decorators.Whip;
+import com.pdt.simplefactory.decorators.starbuzz.implementations.DarkRoast;
+import com.pdt.simplefactory.decorators.starbuzz.implementations.Espresso;
+import com.pdt.simplefactory.decorators.starbuzz.implementations.HouseBlend;
 
 public class StarBuzzCoffee {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package com.pdt.decorators.starbuzz.implementations;
+package com.pdt.simplefactory.decorators.starbuzz.implementations;
 
-import com.pdt.decorators.starbuzz.Beverage;
+import com.pdt.simplefactory.decorators.starbuzz.Beverage;
 
 public class Espresso extends Beverage {
     public Espresso(){

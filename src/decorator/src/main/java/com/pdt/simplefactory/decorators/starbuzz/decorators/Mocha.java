@@ -1,6 +1,6 @@
-package com.pdt.decorators.starbuzz.decorators;
+package com.pdt.simplefactory.decorators.starbuzz.decorators;
 
-import com.pdt.decorators.starbuzz.Beverage;
+import com.pdt.simplefactory.decorators.starbuzz.Beverage;
 
 public class Mocha extends CondimentDecorator{
     public Mocha(Beverage beverage){
