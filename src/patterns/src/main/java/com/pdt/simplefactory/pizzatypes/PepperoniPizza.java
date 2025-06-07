@@ -1,8 +1,16 @@
 package com.pdt.simplefactory.pizzatypes;
 
+import com.pdt.abstractfactory.Pizza;
+import com.pdt.abstractfactory.ingredients.factory.contract.PizzaIngredientFactory;
 import com.pdt.simplefactory.pizzastore.PizzaStore;
 
-public class PepperoniPizza implements PizzaStore.Pizza {
+public class PepperoniPizza extends Pizza {
+    private final PizzaIngredientFactory ingredientFactory;
+
+    public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
+
     @Override
     public void prepare() {
 

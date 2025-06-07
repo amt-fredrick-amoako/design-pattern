@@ -1,23 +1,20 @@
 package com.pdt.abstractfactory;
 
+import com.pdt.abstractfactory.ingredients.rawmaterials.basematerials.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Pizza {
     public String name;
-    public String dough;
-    public String sauce;
-    public List<Object> toppings = new ArrayList<>();
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggies[] veggies;
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected Clams clam;
 
-    public void prepare(){
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.println("Adding toppings...");
-        for (Object topping : toppings) {
-            System.out.println("    " + topping.toString());
-        }
-    }
+    public abstract void prepare();
 
     public void bake() {
         System.out.println("Bake for 25 minutes at 350");
@@ -27,6 +24,10 @@ public abstract class Pizza {
     }
     public void box(){
         System.out.println("Place pizza in official PizzaStore box");
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
